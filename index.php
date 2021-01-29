@@ -116,19 +116,19 @@
     <section class="contact-me" id="contact-me">
         <div class="form-bg">
             <div class="form-container">
-                <span>Like what you see?</span>
+                <p>Like what you see?</p>
                 <h2>Contact Me</h2>
                 <div class="border"></div>
                 <form action="" class="contact-form">
                     <label for="name">Your name*</label>
-                    <input type="text" class="contact-form-text">
-                    <span class="error-message hidden"></span>
+                    <input type="text" class="contact-form-text error-form">
+                    <p class="error-message hidden">*Please enter a valid name</p>
                     <label for="email">Your email*</label>
                     <input type="text" class="contact-form-text">
-                    <span class="error-message hidden"></span>
+                    <p class="error-message hidden"></p>
                     <label for="name">Your message*</label>
                     <textarea class="contact-form-text"></textarea>
-                    <span class="error-message hidden"></span>
+                    <p class="error-message hidden"></p>
                     <input type="submit" class="btn-contact-me" value="Send">
                 </form>
             </div>
