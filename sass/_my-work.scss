@@ -1,0 +1,137 @@
+.my-work{
+    position: relative;
+    color: $color-secondary;
+    background-color: $color-primary;
+    padding: 4em 0;
+
+    h5{
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        padding-left: 0.5rem;
+        border-left: 3px solid $color-logo;
+        margin-left: 5%;
+    }
+
+    .project{
+        width: 90%;
+        margin: 2em auto;
+        display: grid;
+
+        .left{
+            h3{
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            p{
+                margin: 1.5em 0;
+            }
+        }
+
+        .right{     
+            position: relative;
+            background: $color-secondary;
+
+            img{
+                max-width: 100%;
+                object-fit: contain;
+                transition: all 0.2s ease;
+            }
+
+            .right-text{
+                position: absolute;
+                font-size: 1.25rem;
+                font-weight: 300;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $color-logo;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            &:hover{
+                img{
+                    opacity: 0.4;
+                }
+
+                .right-text{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px){
+    .my-work .project{
+        grid-template-columns: 1fr 1fr;
+
+        .left{
+            display: grid;
+            align-content: center;
+
+            h3, p{
+                max-width: 80%;
+            }
+
+            p{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 880px){
+    .my-work{ 
+        .project .left{
+            h3{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1450px){
+    .my-work{ 
+        h5{
+            font-size: 1.25rem;
+            letter-spacing: 0.25rem;
+            border-left: 4px solid $color-logo;
+        }
+
+        .project .left{
+            h3{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1650px){
+    .my-work{
+        h5{
+            font-size: 1.5rem;
+            letter-spacing: 0.4rem;
+            border-left: 5px solid $color-logo;
+        }
+
+        .project{
+            .left{
+                h3{
+                    font-size: 3rem;
+                }
+
+                p{
+                    font-size: 1.25rem;
+                }
+            }
+
+            .right .right-text{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
