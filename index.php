@@ -121,8 +121,8 @@
                 <div class="border"></div>
                 <form action="" class="contact-form">
                     <label for="name">Your name*</label>
-                    <input type="text" class="contact-form-text error-form">
-                    <p class="error-message hidden">*Please enter a valid name</p>
+                    <input type="text" class="contact-form-text"><!--error-form-->
+                    <p class="error-message hidden"></p>
                     <label for="email">Your email*</label>
                     <input type="text" class="contact-form-text">
                     <p class="error-message hidden"></p>

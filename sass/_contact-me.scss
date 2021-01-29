@@ -12,7 +12,7 @@
         .form-container{
             width: 90%;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2em;
 
             p{
                 text-align: center;
@@ -31,7 +31,7 @@
                 .contact-form-text{
                     display: block;
                     width: 100%;
-                    margin: 1em 0;
+                    margin: 2em 0;
                     border: 0;
                     background: $color-secondary-lightened;
                     padding: 1em 2em;
@@ -66,9 +66,9 @@
                     
                 }
 
-                /*.hidden{
+                .hidden{
                     display: none;
-                }*/
+                }
                 
                 .btn-contact-me{
                     float: left;
@@ -78,8 +78,8 @@
                     font-family: 'Open Sans', sans-serif;
                     font-weight: 700;
                     font-size: 1.2rem;
-                    padding: 0.5rem 1.5rem;
-                    border-radius: 0.5rem;
+                    padding: 0.5em 1.5em;
+                    border-radius: 0.5em;
                     cursor: pointer;
                     transition: 0.5s;
                     margin: 1em 0;
@@ -103,5 +103,44 @@
 @media screen and (min-width: 1000px){
     .contact-me .form-bg{
         width: 50%;
+    }
+}
+
+@media screen and (min-width: 1450px){
+    .contact-me .form-bg .form-container{
+        h2{
+            font-size: 3rem;
+        }
+
+        .contact-form{
+            .contact-form-text{
+                padding: 1.25em 2.5em;
+            }
+
+            .btn-contact-me{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1650px){
+    .contact-me .form-bg .form-container{
+        p{
+            font-size: 1.25rem;
+        }
+
+        h2{
+            font-size: 3.5rem;
+        }
+
+        .contact-form{
+            font-size: 1.25rem;
+
+            .error-message{
+                font-size: 1rem;
+            }
+
+        }
     }
 }
