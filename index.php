@@ -27,24 +27,24 @@
     <section class="banner" id="banner">
         <div class="banner-content">
             <div class="banner-text-wrapper">
-                <h1>Handcrafting incredible web experience</h1>
-                <span>Meet Amir</span>
-                <a href="#my-work" class="btn-learn-more">Learn More</a>
+                <h1 class="stagger1">Handcrafting incredible web experience</h1>
+                <span class="stagger1">Meet Amir</span>
+                <a href="#my-work" class="btn-learn-more stagger1">Learn More</a>
             </div>
         </div>
         <div class="banner-img"></div>
     </section>
 
     <section class="my-work" id="my-work">
-        <h5>Featured Projects</h5>
+        <h5 class="transition2">Featured Projects</h5>
 
         <div class="project">
-            <div class="left">
+            <div class="left transition2">
                 <h3>Amazing Website Number One</h3>
                 <p>An amazing website I have built for my client. He was super happy and you will be too.</p>
                 <a href="#" class="btn-read-more"></a>
             </div>
-            <div class="right">
+            <div class="right transition2">
                 <a href="#">
                     <img src="img/project_placeholder.png" alt="Featured Project One">
                     <div class="right-text">
@@ -58,7 +58,7 @@
     <section class="services" id="services">
         <div class="services-container">
             <div class="how-can-i-help">
-                <h3>How Can I help You</h3>
+                <h3 class="h3-transition">How Can I help You</h3>
                 <div class="card-wrapper">
                     <div class="card">
                         <div class="icon-container one">
@@ -84,8 +84,8 @@
                 </div>
             </div>
             <div class="tech-i-use">
-                <h5>Tech I Use</h5>
-                <p>Below is the list of technologies I use</p>
+                <h5 class="h5-transition-tiu">Tech I Use</h5>
+                <p class="p-transition-tiu">Below is the list of technologies I use</p>
                 <div class="skill-container">
                     <div class="skill">
                         <img src="img/html5-original-wordmark.svg" alt="HTML Icon">
@@ -152,6 +152,13 @@
         </div>
         <p>&#169; 2021 nomadcodr.com</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="js/animations-main.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/animation-onscroll.js"></script>
 
 </body>
 </html>
