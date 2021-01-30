@@ -137,10 +137,20 @@
     <footer>
         <div class="footer-container">
             <div class="choose-language">
-                <h5>Change Language</h5>
+                <h6>Change Language</h6>
                 <a href="#">EN </a>|<a href="#"> RU</a>
+                <p>*Language settings will be saved for your next visit</p>
+            </div>
+            <div class="credits">
+               <h6>Credits:</h6>
+                <ul>
+                    <li><a href="https://unsplash.com/@altumcode">Altum Code</a></li>
+                    <li><a href="https://tilda.cc/free-icons/">Tilda Icons</a></li>
+                    <li><a href="https://github.com/devicons/devicon">Devicon</a></li>
+                </ul>
             </div>
         </div>
+        <p>&#169; 2021 nomadcodr.com</p>
     </footer>
 
 </body>
