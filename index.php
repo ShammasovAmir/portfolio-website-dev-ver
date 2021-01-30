@@ -118,7 +118,6 @@
             <div class="form-container">
                 <p>Like what you see?</p>
                 <h2>Contact Me</h2>
-                <div class="border"></div>
                 <form action="" class="contact-form">
                     <label for="name">Your name*</label>
                     <input type="text" class="contact-form-text"><!--error-form-->

@@ -22,7 +22,7 @@
                 font-size: 1.75rem;
                 font-weight: 700;
                 text-align: center;
-                padding: 0.75em 0 1em;
+                padding: 0 0 0.5em;
             }
 
             .contact-form{
@@ -31,7 +31,7 @@
                 .contact-form-text{
                     display: block;
                     width: 100%;
-                    margin: 2em 0;
+                    margin: 1em 0;
                     border: 0;
                     background: $color-secondary-lightened;
                     padding: 1em 2em;
@@ -59,7 +59,7 @@
 
                 .error-message{
                     text-align: right;
-                    font-size: 0.75rem;
+                    font-size: 0.5rem;
                     color: $color-alert;
                     margin: 0.5em 0;
 
@@ -77,7 +77,7 @@
                     background: $color-action;
                     font-family: 'Open Sans', sans-serif;
                     font-weight: 700;
-                    font-size: 1.2rem;
+                    text-transform: uppercase;
                     padding: 0.5em 1.5em;
                     border-radius: 0.5em;
                     cursor: pointer;
@@ -118,7 +118,7 @@
             }
 
             .btn-contact-me{
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
         }
     }
@@ -138,7 +138,7 @@
             font-size: 1.25rem;
 
             .error-message{
-                font-size: 1rem;
+                font-size: 0.75rem;
             }
 
         }
