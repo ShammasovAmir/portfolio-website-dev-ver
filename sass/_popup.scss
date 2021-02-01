@@ -1,0 +1,69 @@
+.bg-modal{
+	width: 100%;;
+	height: 100%;
+	background-color: rgba($color: $color-secondary-very-dark, $alpha: .7);
+	position: fixed;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	z-index: 11;
+
+
+	.modal-content{
+		position: relative;
+		max-width: 31.25em;
+		height: 18.75em;
+        background-color: $color-primary;
+        color: $color-secondary-lightened;
+		border-radius: 1em;
+		text-align: center;
+		padding: 2em;
+		
+		.close{
+			position: absolute;
+			top: 0;
+			right: .4em;
+			font-size: 2.5em;
+			cursor: pointer;
+		}
+
+        .modal-txt{
+            padding-top: 1em;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+
+            h6{
+                max-width: 60%;
+                margin: 0.75rem auto;
+                font-size: 1.25em;
+                color: $color-secondary-very-dark;
+                font-weight: 700; 
+            }
+
+            a{
+                display: block;
+                color: $color-secondary-lightened;
+                margin: 0.75em 0;
+                transition: 0.3s ease;
+                
+                span svg{
+                    height: 1em;
+                    vertical-align: top;
+                }
+
+                &:hover{
+                    color: $color-logo;
+                }
+            }
+        }
+	}
+}
+
+@media screen and (min-width: 1650px){
+    .bg-modal .modal-content{
+        font-size: 1.25rem;
+    }
+}

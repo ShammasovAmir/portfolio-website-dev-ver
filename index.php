@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><!--TODO:-->
+<html lang="en-US"><!--TODO:-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,15 @@
     <title>Welcome</title>
 </head>
 <body>
+
+    <!-- Navigation -->
     <nav>
         <input id="nav-toggle" type="checkbox">
         <div class="logo"><a href="#banner"><span class="logo-part">nomad</span>codr</a></div>
         <ul class="links">
+            <li id="langBtn">
+                <span>En <i class="fas fa-chevron-down"></i></span>
+            </li>
             <li><a href="#my-work">My Work</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact-me">Contact Me</a></li>
@@ -24,6 +29,7 @@
         </label>
     </nav>
 
+    <!-- Banner -->
     <section class="banner" id="banner">
         <div class="banner-content">
             <div class="banner-text-wrapper">
@@ -35,6 +41,7 @@
         <div class="banner-img"></div>
     </section>
 
+    <!-- Featured Projects -->
     <section class="my-work" id="my-work">
         <h5 class="transition2">Featured Projects</h5>
 
@@ -55,6 +62,7 @@
         </div>
     </section>
 
+    <!-- Services -->
     <section class="services" id="services">
         <div class="services-container">
             <div class="how-can-i-help">
@@ -79,7 +87,7 @@
                             <img src="img/Tilda_Icons_40_IT_landing.svg" alt="Landing Page Icon">
                         </div>
                         <h4>Simple Landing Pages</h4>
-                        <p>Simple but well-designed landing pages built with html or WordPress that will attract costumers to your company/buisness</p>
+                        <p>Simple but well-designed landing pages that will attract costumers to your company/buisness</p>
                     </div>
                 </div>
             </div>
@@ -113,6 +121,7 @@
         </div>
     </section>
     
+    <!-- Contact Me -->
     <section class="contact-me" id="contact-me">
         <div class="form-bg">
             <div class="form-container">
@@ -134,12 +143,15 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <div class="choose-language">
-                <h6>Change Language</h6>
-                <a href="#">EN </a>|<a href="#"> RU</a>
-                <p>*Language settings will be saved for your next visit</p>
+            <div class="social-links">
+                <h6>Links to Social Media</h6>
+                <ul>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                    <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
             </div>
             <div class="credits">
                <h6>Credits:</h6>
@@ -153,12 +165,40 @@
         <p>&#169; 2021 nomadcodr.com</p>
     </footer>
 
+    <!-- Modal Section -->
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="close">&times;</div>
+            <div class="modal-txt">
+                <h6>Choose Your Language</h6>
+                    <a href="#">
+                        <span><?php echo file_get_contents("img/us.svg"); ?></span>
+                        <span> English(US)</span>
+                    </a>
+                    <a href="#">
+                        <span><?php echo file_get_contents("img/gb.svg"); ?></span>
+                        <span> English(UK)</span>
+                    </a>
+                    <a href="#">
+                        <span><?php echo file_get_contents("img/ru.svg"); ?></span>
+                        <span lang="ru"> Русский</span>
+                    </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP Links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
-    <script src="js/animations-main.js"></script>
-    <script src="js/smooth-scroll.js"></script>
-    <script src="js/animation-onscroll.js"></script>
+
+    <!-- Animation Files Links -->
+    <script src="animations/animations-main.js"></script>
+    <script src="animations/smooth-scroll.js"></script>
+    <script src="animations/animation-onscroll.js"></script>
+
+    <!-- JS Scripts Links -->
+    <script src="js/popup-lang.js"></script>
 
 </body>
 </html>

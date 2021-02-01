@@ -43,6 +43,18 @@ nav {
         align-items: center;
     }
 
+    .links #langBtn{
+        display: block;
+        padding: 1em;
+        color: $color-primary;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover{
+            color: $color-logo;
+        }
+    }
+
     .links a {
         display: block;
         padding: 1em;
@@ -124,13 +136,5 @@ nav {
 @media screen and (min-width: 1400px){
     nav{
         font-size: 1.25rem;
-
-        .logo{
-            width: 60%;
-        }
-
-        .links{
-            width: 40%;
-        }
     }
 }

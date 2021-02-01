@@ -12,6 +12,16 @@ footer{
         width: 80%;
         margin: 0 auto;
         padding: 2em 0 1em;
+        line-height: 1.75em;
+
+        a{
+            color: $color-secondary-lightened;
+            transition: all 0.3s ease;
+
+            &:hover{
+                color: $color-logo;
+            }
+        }
 
         h6{
             font-size: 1rem;
@@ -20,24 +30,8 @@ footer{
             padding-bottom: 1em;
         }
 
-        .choose-language{
-            a{
-                color: $color-logo;
-            }
-
-            p{
-                padding-top: 1em;
-                width: unset;
-                margin: 0;
-            }
-        }
-
-        .credits{
-            line-height: 1.75em;
-
-            a{
-                color: $color-secondary-lightened;
-            }
+        .social-links{
+            margin-bottom: 1.5em;
         }
     }
 }
