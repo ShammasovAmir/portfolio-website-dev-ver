@@ -127,17 +127,26 @@
             <div class="form-container">
                 <p>Like what you see?</p>
                 <h2>Contact Me</h2>
-                <form action="" class="contact-form">
-                    <label for="name">Your name*</label>
-                    <input type="text" class="contact-form-text"><!--error-form-->
-                    <p class="error-message hidden"></p>
-                    <label for="email">Your email*</label>
-                    <input type="text" class="contact-form-text">
-                    <p class="error-message hidden"></p>
-                    <label for="name">Your message*</label>
-                    <textarea class="contact-form-text"></textarea>
-                    <p class="error-message hidden"></p>
-                    <input type="submit" class="btn-contact-me" value="Send">
+                <form action="" class="contact-form" id="form">
+
+                    <div class="form-field">
+                        <label for="name">Your name*</label>
+                        <input type="text" class="contact-form-text" id="name" autocomplete="off"><!--error-form-->
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Your email*</label>
+                        <input type="text" class="contact-form-text" id="email" autocomplete="off">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-field">
+                        <label for="name">Your message*</label>
+                        <textarea class="contact-form-text" id="message"></textarea>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-field">
+                        <input type="submit" class="btn-contact-me" value="Send">
+                    </div>
                 </form>
             </div>
         </div>
@@ -172,15 +181,27 @@
             <div class="modal-txt">
                 <h6>Choose Your Language</h6>
                     <a href="#">
-                        <span><?php echo file_get_contents("img/us.svg"); ?></span>
-                        <span> English(US)</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-gb" viewBox="0 0 640 480">
+                            <path fill="#012169" d="M0 0h640v480H0z"/>
+                            <path fill="#FFF" d="M75 0l244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
+                            <path fill="#C8102E" d="M424 281l216 159v40L369 281h55zm-184 20l6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"/>
+                            <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
+                            <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"/>
+                        </svg>
+                        </span>
+                        <span> English</span>
                     </a>
-                    <a href="#">
-                        <span><?php echo file_get_contents("img/gb.svg"); ?></span>
-                        <span> English(UK)</span>
-                    </a>
-                    <a href="#">
-                        <span><?php echo file_get_contents("img/ru.svg"); ?></span>
+                    <a href="ru/index.html">
+                        <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-ru" viewBox="0 0 640 480">
+                            <g fill-rule="evenodd" stroke-width="1pt">
+                                <path fill="#fff" d="M0 0h640v480H0z"/>
+                                <path fill="#0039a6" d="M0 160h640v320H0z"/>
+                                <path fill="#d52b1e" d="M0 320h640v160H0z"/>
+                            </g>
+                        </svg>
+                        </span>
                         <span lang="ru"> Русский</span>
                     </a>
             </div>
@@ -199,6 +220,7 @@
 
     <!-- JS Scripts Links -->
     <script src="js/popup-lang.js"></script>
+    <script src="js/validate.js"></script>
 
 </body>
 </html>

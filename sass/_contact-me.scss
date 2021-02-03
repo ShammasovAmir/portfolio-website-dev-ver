@@ -28,65 +28,68 @@
             .contact-form{
                 margin: auto;
 
-                .contact-form-text{
-                    display: block;
-                    width: 100%;
-                    margin: 1em 0;
-                    border: 0;
-                    background: $color-secondary-lightened;
-                    padding: 1em 2em;
-                    outline: none;
-                    color: $color-primary;
-                    transition: 0.5s;
+                .form-field{
+                    .contact-form-text{
+                        display: block;
+                        width: 100%;
+                        margin: 1em 0;
+                        border: 0;
+                        background: $color-secondary-lightened;
+                        padding: 1em 2em;
+                        outline: none;
+                        color: $color-primary;
+                        transition: 0.5s;
 
-                    &:focus{
-                        box-shadow: 0 0 10px 4px $color-logo;
+                        &:focus{
+                            box-shadow: 0 0 10px 4px $color-logo;
+                        }
                     }
-                }
 
-                textarea.contact-form-text{
-                    resize: none;
-                    height: 120px;
-                }
-
-                .error-form{
-                    border: 1px solid $color-alert;
-
-                    &:focus{
-                        box-shadow: 0 0 10px 4px $color-alert;
+                    textarea.contact-form-text{
+                        resize: none;
+                        height: 120px;
                     }
-                }
 
-                .error-message{
-                    text-align: right;
-                    font-size: 0.5rem;
-                    color: $color-alert;
-                    margin: 0.5em 0;
+                    .error-form{
+                        border: 1px solid $color-alert;
 
+                        &:focus{
+                            box-shadow: 0 0 10px 4px $color-alert;
+                        }
+                    }
+
+                    small{
+                        font-size: 0.5rem;
+                        color: $color-alert;
+                        margin: 0.5em 0;   
+                    }
+
+                    .success-form{
+                        border: 1px solid $color-success;
+
+                        &:focus{
+                            box-shadow: 0 0 10px 4px $color-success;
+                        }
+                    }
                     
-                }
+                    .btn-contact-me{
+                        float: left;
+                        border: 2px solid $color-action;
+                        color: $color-secondary;
+                        background: $color-action;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        padding: 0.5em 1.5em;
+                        border-radius: 0.5em;
+                        cursor: pointer;
+                        transition: 0.5s;
+                        margin: 1em 0;
 
-                .hidden{
-                    display: none;
-                }
-                
-                .btn-contact-me{
-                    float: left;
-                    border: 2px solid $color-action;
-                    color: $color-secondary;
-                    background: $color-action;
-                    font-family: 'Open Sans', sans-serif;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    padding: 0.5em 1.5em;
-                    border-radius: 0.5em;
-                    cursor: pointer;
-                    transition: 0.5s;
-                    margin: 1em 0;
-
-                    &:hover{
-                        background: $color-secondary;
-                        color: $color-action;
+                        &:hover{
+                            background: $color-secondary;
+                            color: $color-action;
+                        }
                     }
                 }
             }
@@ -112,7 +115,7 @@
             font-size: 3rem;
         }
 
-        .contact-form{
+        .contact-form .form-field{
             .contact-form-text{
                 padding: 1.25em 2.5em;
             }
@@ -137,10 +140,11 @@
         .contact-form{
             font-size: 1.25rem;
 
-            .error-message{
-                font-size: 0.75rem;
+            .form-field{
+                small{
+                    font-size: 0.75rem;
+                }
             }
-
         }
     }
 }
