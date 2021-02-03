@@ -120,7 +120,7 @@ const checkMessage = () =>
 
     if (!isRequired(message)) 
     {
-        showError(messageEl, 'Please enter a your message.');
+        showError(messageEl, 'Please enter your message.');
     }
     else 
     {

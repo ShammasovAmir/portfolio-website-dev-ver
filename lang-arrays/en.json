@@ -1,0 +1,22 @@
+{
+    "validation": [
+        {
+            "name": [
+                {
+                    "nameEmptyErr": "Please enter your name."
+                }
+            ],
+            "email": [
+                {
+                    "emailEmptyErr":   "Please enter your email.",
+                    "emailInvalidErr": "Please enter a valid email."
+                }
+            ],
+            "message": [
+                {
+                    "messageEmptyErr": "Please enter your message."
+                }
+            ]
+        }
+    ]
+}
