@@ -1,8 +1,10 @@
+import { sendForm } from "./sendform.js";
+
 let langArray = {};
 
 if (document.documentElement.lang === 'en-US')
 {
-    // Create en.js
+    // Create en
     langArray = {
         validation_msg: {
             nameErr: {
@@ -20,7 +22,7 @@ if (document.documentElement.lang === 'en-US')
 }
 else if (document.documentElement.lang === 'ru')
 {
-    // Create ru.js
+    // Create ru
     langArray = {
         validation_msg: {
             nameErr: {
@@ -61,9 +63,11 @@ form.addEventListener('submit', function (e)
             isEmailValid &&
             isMessageValid;
 
+        const input = document.querySelector(".contact-form-text");
+
         if (isFormValid)
         {  
-        // import {} from "./sendform.js";TODO:
+            sendForm();
         }
 
     }
