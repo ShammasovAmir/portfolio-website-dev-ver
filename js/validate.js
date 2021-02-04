@@ -1,3 +1,44 @@
+let langArray = {};
+
+if (document.documentElement.lang === 'en-US')
+{
+    // Create en.js
+    langArray = {
+        validation_msg: {
+            nameErr: {
+                nameEmptyErr: "Please enter your name."
+            },
+            emailErr: {
+                emailEmptyErr: "Please enter your email.",
+                emailInvalidErr: "Please enter a valid email."
+            },
+            messageErr: {
+                messageEmptyErr: "Please enter your message."
+            }
+        }
+    }
+}
+else if (document.documentElement.lang === 'ru')
+{
+    // Create ru.js
+    langArray = {
+        validation_msg: {
+            nameErr: {
+                nameEmptyErr: "Пожалуйста, введите ваше имя."
+            },
+            emailErr: {
+                emailEmptyErr: "Пожалуйста, введите ваш адрес электронной почты.",
+                emailInvalidErr: "Пожалуйста, введите правильный адрес электронной почты."
+            },
+            messageErr: {
+                messageEmptyErr: "Пожалуйста, введите ваше сообщение."
+            }
+        }
+    }
+}
+
+const { validation_msg: errMsg } = langArray;
+
 const form      = document.getElementById('form');
 const nameEl    = document.getElementById('name');
 const emailEl   = document.getElementById('email');
@@ -49,7 +90,7 @@ const showError = (input, message) =>
     textField.classList.add('error-form');
 
     // show the error message
-    const error = formField.querySelector('small');
+    const error = formField.querySelector('.error-message');
     error.textContent = message;
 }
 
@@ -65,7 +106,7 @@ const showSuccess = (input) =>
     textField.classList.add('success-form');
 
     // hide the error message
-    const error = formField.querySelector('small');
+    const error = formField.querySelector('.error-message');
     error.textContent = '';
 }
 
@@ -80,7 +121,7 @@ const checkName = () =>
 
     if (!isRequired(name)) 
     {
-        showError(nameEl, 'Please enter your name.');
+        showError(nameEl, errMsg.nameErr.nameEmptyErr);
     }
     else 
     {
@@ -97,11 +138,11 @@ const checkEmail = () =>
     const email = emailEl.value.trim();
     if (!isRequired(email)) 
     {
-        showError(emailEl, 'Please enter your email.');
+        showError(emailEl, errMsg.emailErr.emailEmptyErr);
     } 
     else if (!isEmailValid(email)) 
     {
-        showError(emailEl, 'Please enter a valid email.');
+        showError(emailEl, errMsg.emailErr.emailInvalidErr);
     } 
     else 
     {
@@ -120,7 +161,7 @@ const checkMessage = () =>
 
     if (!isRequired(message)) 
     {
-        showError(messageEl, 'Please enter your message.');
+        showError(messageEl, errMsg.messageErr.messageEmptyErr);
     }
     else 
     {
