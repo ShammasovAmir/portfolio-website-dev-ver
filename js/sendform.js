@@ -16,7 +16,7 @@ export const sendForm = async () =>
         {
             if (text === "Success")
             {
-                if (document.documentElement.lang === 'en-US')
+                if (document.documentElement.lang === 'en')
                 {
                     alert('Email has been sent successfully.');
                 }
@@ -27,7 +27,7 @@ export const sendForm = async () =>
             }
             else if (text === "Error")
             {
-                if (document.documentElement.lang === 'en-US')
+                if (document.documentElement.lang === 'en')
                 {
                     alert('Email was not sent... Please retry later');
                 }

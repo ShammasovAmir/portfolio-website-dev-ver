@@ -3,9 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Документ</title>
+    <link rel="alternate" hreflang="x-default"
+    href="../index.html" />
+    <link rel="alternate" hreflang="ru" href="index.html" />
+    <script src="https://kit.fontawesome.com/057aaff998.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Добро пожаловать на <span lang="en">nomadcodr.com</span></title>
 </head>
 <body>
-    Пусто
+
+    <!-- Navigation -->
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo"><a href="#banner"><span lang="en"><span class="logo-part">nomad</span>codr</span></a></div>
+        <ul class="links">
+            <li id="langBtn">
+                <span lang="en">Ru <i class="fas fa-chevron-down"></i></span>
+            </li>
+            <li><a href="#my-work">Проекты</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#contact-me">Свяжитесь со мной</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner" id="banner">
+        <div class="banner-content">
+            <div class="banner-text-wrapper">
+                <h1 class="stagger1">Создание качественных веб приложений</h1>
+                <span class="stagger1">Встречайте Амира</span>
+                <a href="#my-work" class="btn-learn-more stagger1">Узнать Больше</a>
+            </div>
+        </div>
+        <div class="banner-img"></div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="my-work" id="my-work">
+        <h5 class="transition2">Лучшие проекты</h5>
+
+        <div class="project">
+            <div class="left transition2">
+                <h3>Замечательный сайт номер один</h3>
+                <p>Замечательный веб сайтб который я сделал для своего клиента. Он был доволен моими услугами и вы будете тоже.</p>
+                <a href="#" class="btn-read-more"></a>
+            </div>
+            <div class="right transition2">
+                <a href="#">
+                    <img src="../img/project_placeholder.png" alt="Featured Project One">
+                    <div class="right-text">
+                        <span><i class="fas fa-external-link-alt"></i> Узнать Больше</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="how-can-i-help">
+                <h3 class="h3-transition">Чем Я Могу Помочь</h3>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="icon-container one">
+                            <img src="../img/Tilda_Icons_40_IT_adaptive.svg" alt="Adaptive App Icon">
+                        </div>
+                        <h4>Фронтенд Разработка</h4>
+                        <p>Динамичные веб приложения с отзывчивым дизайном и интуитивным пользовательским интерфейсом</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-container two">
+                            <img src="../img/Tilda_Icons_40_IT_data.svg" alt="Database Icon">
+                        </div>
+                        <h4>Бекенд Разработка</h4>
+                        <p>Надежные веб сайты с функциональностью со стороны сервера, сложные бекенд приложения с интеграцией баз данных.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-container three">
+                            <img src="../img/Tilda_Icons_40_IT_landing.svg" alt="Landing Page Icon">
+                        </div>
+                        <h4>Простые лендинги</h4>
+                        <p>Лендинги с хорошо продуманным дизайном, которые привлекут клиентов к вашей компании/вашему бизнесу.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-i-use">
+                <h5 class="h5-transition-tiu">Чем я пользуюсь</h5>
+                <p class="p-transition-tiu">Ниже приведен список используюмых мною технологий</p>
+                <div class="skill-container">
+                    <div class="skill">
+                        <img src="../img/html5-original-wordmark.svg" alt="HTML Icon">
+                    </div>
+                    <div class="skill">
+                        <img src="../img/css3-original-wordmark.svg" alt="CSS Icon">
+                    </div>
+                    <div class="skill">
+                        <img src="../img/sass-original.svg" alt="Sass Icon">
+                    </div>
+                    <div class="skill">
+                        <img src="../img/bootstrap-plain-wordmark.svg" alt="Bootstrap Icon">
+                    </div>
+                    <div class="skill">
+                        <img src="../img/javascript-original.svg" alt="JavaScript Icon">
+                    </div>
+                    <div class="skill">
+                        <img src="../img/php-plain.svg" alt="PHP Icon">
+                    </div>
+                    <div class="skill">
+                        <img src="../img/mysql-original-wordmark.svg" alt="MySQL Icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Me -->
+    <section class="contact-me" id="contact-me">
+        <div class="form-bg">
+            <div class="form-container">
+                <p>Заинтересованы?</p>
+                <h2>Свяжитесь со мной</h2>
+                <form action="" class="contact-form" id="form">
+
+                    <div class="form-field">
+                        <label for="name">Ваше имя*</label>
+                        <input type="text" class="contact-form-text" id="name" autocomplete="off"><!--error-form-->
+                        <p class="error-message"></p>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Ваш е-майл*</label>
+                        <input type="text" class="contact-form-text" id="email" autocomplete="off">
+                        <p class="error-message"></p>
+                    </div>
+                    <div class="form-field">
+                        <label for="name">Ваше Сообщение*</label>
+                        <textarea class="contact-form-text" id="message"></textarea>
+                        <p class="error-message"></p>
+                    </div>
+                    <div class="form-field">
+                        <input type="submit" class="btn-contact-me" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <h6>Ссылки на соцсети</h6>
+                <ul>
+                    <li><a href="#"><span lang="en"><i class="fab fa-linkedin"></i> Linkedin</span></a></li>
+                    <li><a href="#"><span lang="en"><i class="fab fa-github"></i> GitHub</span></a></li>
+                </ul>
+            </div>
+            <div class="credits">
+                <span lang="en">
+               <h6>Credits:</h6>
+                <ul>
+                    <li><a href="https://unsplash.com/@altumcode">Altum Code</a></li>
+                    <li><a href="https://tilda.cc/free-icons/">Tilda Icons</a></li>
+                    <li><a href="https://github.com/devicons/devicon">Devicon</a></li>
+                </ul>
+                </span>
+            </div>
+        </div>
+        <span lang="en"><p>&#169; 2021 nomadcodr.com</p></span>
+    </footer>
+
+    <!-- Modal Section -->
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="close">&times;</div>
+            <div class="modal-txt">
+                <h6>Выберите язык</h6>
+                    <a href="../index.html">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-gb" viewBox="0 0 640 480">
+                            <path fill="#012169" d="M0 0h640v480H0z"/>
+                            <path fill="#FFF" d="M75 0l244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
+                            <path fill="#C8102E" d="M424 281l216 159v40L369 281h55zm-184 20l6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"/>
+                            <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
+                            <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"/>
+                        </svg>
+                        </span>
+                        <span lang="en"> English</span>
+                    </a>
+                    <a href="index.html">
+                        <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-ru" viewBox="0 0 640 480">
+                            <g fill-rule="evenodd" stroke-width="1pt">
+                                <path fill="#fff" d="M0 0h640v480H0z"/>
+                                <path fill="#0039a6" d="M0 160h640v320H0z"/>
+                                <path fill="#d52b1e" d="M0 320h640v160H0z"/>
+                            </g>
+                        </svg>
+                        </span>
+                        <span lang="ru"> Русский</span>
+                    </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+    <!-- Animation Files Links -->
+    <script src="../animations/animations-main.js"></script>
+    <script src="../animations/smooth-scroll.js"></script>
+    <script src="../animations/animation-onscroll.js"></script>
+
+    <!-- JS Scripts Links -->
+    <script src="../js/popup-lang.js"></script>
+    <script src="../js/validate.js" type="module"></script>
+
 </body>
 </html>

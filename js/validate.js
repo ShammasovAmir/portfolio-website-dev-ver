@@ -2,7 +2,7 @@ import { sendForm } from "./sendform.js";
 
 let langArray = {};
 
-if (document.documentElement.lang === 'en-US')
+if (document.documentElement.lang === 'en')
 {
     // Create en
     langArray = {
