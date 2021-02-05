@@ -1,45 +1,16 @@
-export const sendForm = async () => 
+export async function sendForm(e)
 {
-    const formData = new FormData(this);
-    const searchParams = new URLSearchParams();
+    let formData = new FormData(form);
 
-    fetch('sendmail.php',
-        {
-            method: 'POST',
-            body:   searchParams
-        }
-    ).then((response) => 
-        {
-            return response.text();
-        }
-    ).then((text) => 
-        {
-            if (text === "Success")
-            {
-                if (document.documentElement.lang === 'en')
-                {
-                    alert('Email has been sent successfully.');
-                }
-                else if (document.documentElement.lang === 'ru')
-                {
-                    alert('Письмо было отправлено успешно.');
-                }
-            }
-            else if (text === "Error")
-            {
-                if (document.documentElement.lang === 'en')
-                {
-                    alert('Email was not sent... Please retry later');
-                }
-                else if (document.documentElement.lang === 'ru')
-                {
-                    alert('Письмо не было отправлено... Повторите попытку позже');
-                }
-            }
-        }
-    ).catch((error) =>
-        {
-            alert(error);
-        }
-    );
+    form.classList.add('_sending');
+    let response = await fetch ('sendmail.php', {
+        method: 'POST',
+        body: formData
+    });
+    if (response.ok) {
+        let result = await response.text();
+        form.reset();
+    } else {
+        alert('Error');
+    }
 }

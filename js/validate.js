@@ -63,8 +63,6 @@ form.addEventListener('submit', function (e)
             isEmailValid &&
             isMessageValid;
 
-        const input = document.querySelector(".contact-form-text");
-
         if (isFormValid)
         {  
             sendForm();
