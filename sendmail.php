@@ -1,36 +1,41 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
+
+    require 'phpmailer/src/Exception.php';
+    require 'phpmailer/src/PHPMailer.php';
+    require 'phpmailer/src/SMTP.php';
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
 
 if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
     $name    = $_POST['name'];
     $email   = $_POST['email'];
     $message = $_POST['message'];
 
-    require 'phpmailer/src/Exception.php';
-    require 'phpmailer/src/PHPMailer.php';
-    require 'phpmailer/src/SMTP.php';
-
     $mail = new PHPMailer();
 
     //smtp settings
     $mail->isSMTP();
     $mail->Host       = "smtp.gmail.com";
-    $mail->SMTPAuth   = true;
-    $mail->Username   = "RRRRRRRRRRRR";
-    $mail->Password   = 'RRRRRRRRRRRRRRR';
-    $mail->Port       = 465;
-    $mail->SMTPSecure = "ssl";
+    $mail->SMTPAuth   = "true";
+    $mail->Username   = "something@gmail.com";
+    $mail->Password   = 'SimplePass';
+    $mail->Port       = "587";
+    $mail->SMTPSecure = "tls";
 
     //email settings
     $mail->isHTML(true);
     $mail->setFrom($email, $name);
-    $mail->addAddress("RRRRRRRRRRRRRR");
+    $mail->addAddress("something@gmail.com");
     $mail->Subject = ("Form Email");
     $mail->Body    = $message;
 
     if ($mail->send()) 
         echo "Success";
     else
-        echo "Error";
+        echo $mail->ErrorInfo;
+
+    $mail->smtpClose();
 }
 ?>

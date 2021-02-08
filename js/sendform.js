@@ -6,10 +6,21 @@ export async function sendForm(e)
         method: 'POST',
         body: formData
     });
-    if (response.ok) {
+    if (response.ok) 
+    {
         let result = await response.text();
         form.reset();
-    } else {
+        if (result === "Success")
+        {
+            alert('Success');
+        }
+        else
+        {
+            alert(result);
+        }
+    } 
+    else 
+    {
         alert('Error');
     }
 }
