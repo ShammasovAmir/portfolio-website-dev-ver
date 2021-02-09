@@ -8,7 +8,8 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
+if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
+{
     $name    = $_POST['name'];
     $email   = $_POST['email'];
     $message = $_POST['message'];
@@ -19,15 +20,15 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
     $mail->isSMTP();
     $mail->Host       = "smtp.gmail.com";
     $mail->SMTPAuth   = "true";
-    $mail->Username   = "something@gmail.com";
-    $mail->Password   = 'SimplePass';
+    $mail->Username   = "simple8@gmail.com";
+    $mail->Password   = '*********';
     $mail->Port       = "587";
     $mail->SMTPSecure = "tls";
 
     //email settings
     $mail->isHTML(true);
     $mail->setFrom($email, $name);
-    $mail->addAddress("something@gmail.com");
+    $mail->addAddress("simple8@gmail.com");
     $mail->Subject = ("Form Email");
     $mail->Body    = $message;
 
