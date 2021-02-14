@@ -62,13 +62,9 @@ form.addEventListener('submit', function (e)
             {
                 let result = await response.text();
                 form.reset();
-                if (result === "Success")
+                if (result != "Success")
                 {
-                    alert('Success');
-                }
-                else
-                {
-                    alert(result);
+                    alert('Error');
                 }
             } 
             else 
